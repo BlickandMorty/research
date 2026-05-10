@@ -22,6 +22,7 @@ Three independent research programs sharing a single discipline:
 | 01 | [**HELIOS**](./01-helios/) | Inference substrate canon. Attention is an interruptible computation routed by an audit-grade signal — not a softmax pass. |
 | 02 | [**EML**](./02-eml/) | A reconceptualization of elementary scientific computation around a single binary operator: `eml(x, y) = exp(x) − ln(y)`. |
 | 03 | [**Substrate Ideas**](./03-substrate-ideas/) | Smaller high-signal ideas: storage-disaggregated runtimes (SSD as RAM extension), the five-plane formalism, ACS, honesty-by-construction. |
+| 04 | [**CMS-X**](./04-cms-x/) | Long-form architectural synthesis: cognition itself as constitutive geometry — Concept Packets, five force laws, memory as topological deformation. Manuscript-stage, with explicit Claim Status discipline. |
 
 This is the public mirror of an active, opinionated research notebook. Some entries are canonical; others are provisional candidates with named falsifiers; a few are vault-only. **The status legend is load-bearing — every claim carries a status tag.** See [`STATUS_LEGEND.md`](./STATUS_LEGEND.md).
 
@@ -66,6 +67,7 @@ This is the public mirror of an active, opinionated research notebook. Some entr
    - Interpretability / mech-interp / safety: → [`01-helios/03-parameter-connectome-T25-T34/`](./01-helios/03-parameter-connectome-T25-T34/) and [`01-helios/04-attention-as-interrupt/`](./01-helios/04-attention-as-interrupt/).
    - Foundation models / on-device inference: → [`01-helios/04-attention-as-interrupt/`](./01-helios/04-attention-as-interrupt/) and [`03-substrate-ideas/01-storage-disaggregated-E3/`](./03-substrate-ideas/01-storage-disaggregated-E3/).
    - Numerical methods / computation foundations: → [`02-eml/`](./02-eml/) end to end.
+   - Cognitive architectures / dynamical systems / safety-as-geometry: → [`04-cms-x/`](./04-cms-x/) — read [`04-cms-x/05-claim-calibration.md`](./04-cms-x/05-claim-calibration.md) first.
    - Game design / structured-data: → [`03-substrate-ideas/05-data-as-lattice/`](./03-substrate-ideas/05-data-as-lattice/).
 
 ---
@@ -124,6 +126,14 @@ research/
 │   ├── 03-honesty-by-construction/     ← StaticFallbackAcknowledged contract
 │   ├── 04-five-plane-formalism/        ← State / Episodic / Assembly / Controller / Verification
 │   └── 05-data-as-lattice/             ← gaming application: shared ontology across game systems
+│
+├── 04-cms-x/                        ← Pillar 4 — manuscript-stage architectural synthesis
+│   ├── README.md                       (claim status framework, key insights table)
+│   ├── 01-cognition-as-constitutive-geometry.md    (the thesis + Concept Packet)
+│   ├── 02-five-force-laws.md                       (attraction / repulsion / binding / damping / constraint)
+│   ├── 03-memory-as-topology.md                    (memory as field deformation + BeliefShift)
+│   ├── 04-traced-and-aqi.md                        (runtime + latent-safety metrics)
+│   └── 05-claim-calibration.md                     (the honest-limits ledger)
 │
 ├── lean/                            ← Lean 4 substrate
 │   ├── lakefile.lean                ← mathlib4 pin

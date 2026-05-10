@@ -18,6 +18,8 @@ The clearest exposition is the [Parameter Connectome Family (T25–T34)](../01-h
 
 The point is not "we trained a safety classifier." The point is that the runtime's audit substrate makes harmful emissions *observable*, and the parameter-space bounds make safety *editable* — both as first-class properties.
 
+For the **architectural-ambition** version of the safety thesis — "cognition itself must be constitutive geometry, not just safety" — see [`04-cms-x/`](../04-cms-x/) and especially [`04-cms-x/02-five-force-laws.md`](../04-cms-x/02-five-force-laws.md) (Neural Barrier Function as `F_constraint`). CMS-X is theoretical at this lock; the operational pieces above (T29, attention-as-interrupt, honesty-by-construction) are the ones that ship.
+
 ---
 
 ## 2. Performance
@@ -85,6 +87,8 @@ The kernel-architecture story sits adjacent to performance and sparsity but is i
 
 This avenue is the most direct intersection with frontier mech-interp work. The vocabulary (SPD, SAE, Goodfire, cellular sheaves) is shared with the labs publishing in this space.
 
+For the synthesis perspective — combining mech-interp parameter decomposition with runtime trajectory monitoring (TRACED) and latent-geometry alignment diagnostics (AQI) — see [`04-cms-x/04-traced-and-aqi.md`](../04-cms-x/04-traced-and-aqi.md). CMS-X argues these two metric surfaces are complementary and necessary together; both are validated independently in the literature.
+
 ---
 
 ## 7. Gaming
@@ -107,6 +111,7 @@ The gaming avenue is the most speculative of the seven and is labeled as such. I
 - If you came in for **interpretability**, start with the [Parameter Connectome Family](../01-helios/03-parameter-connectome-T25-T34/) and the [References](../REFERENCES.md).
 - If you came in for **kernel architecture / numerical methods**, start with [EML](../02-eml/) end to end.
 - If you came in for **local-inference / Apple Silicon**, start with [HELIOS V6.2 hardware lock](../01-helios/README.md#v62-hardware-lock).
+- If you came in for **cognitive architectures / dynamical systems**, start with [CMS-X](../04-cms-x/) — and read [`05-claim-calibration.md`](../04-cms-x/05-claim-calibration.md) **before** the architecture itself.
 - If you came in for **game design / structured-data**, start with [data-as-lattice](../03-substrate-ideas/05-data-as-lattice/).
 
 Whichever entry point: the [STATUS_LEGEND](../STATUS_LEGEND.md) is the prerequisite read. Status discipline is what separates this work from "interesting prose."

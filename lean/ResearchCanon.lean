@@ -19,3 +19,4 @@ import ResearchCanon.Eml.Operator
 import ResearchCanon.Eml.Grammar
 import ResearchCanon.Eml.Density
 import ResearchCanon.Substrate.E3StorageDisaggregated
+import ResearchCanon.CMSX.NeuralBarrierFunction
