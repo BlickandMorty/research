@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Lean / Lake
+.lake/
+lake-packages/
+build/
+*.olean
+*.ilean
+*.hash
+
+# Rust (if any extracted research crate lands here)
+target/
+Cargo.lock
+**/*.rs.bk
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local notes that shouldn't be public
+NOTES_LOCAL.md
+SCRATCH.md
+.local/
+
+# Run logs (these should be committed once verified, not while drafting)
+*.runlog.draft
