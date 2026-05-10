@@ -1,0 +1,41 @@
+name: Markdown Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  status-frontmatter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify status frontmatter on graded entries
+        run: |
+          set -eo pipefail
+          # Files that MUST carry a status: tag — every markdown file under a
+          # pillar that names a theorem, kernel, falsifier, or invariant.
+          REQUIRED=$(find \
+              01-helios \
+              02-eml \
+              03-substrate-ideas \
+              speculative \
+              archive \
+              falsifiers \
+              -name "*.md" -type f 2>/dev/null \
+            || true)
+          MISSING=0
+          for f in $REQUIRED; do
+            if ! head -10 "$f" | grep -qE '^state:'; then
+              echo "::error file=$f::missing 'state:' frontmatter"
+              MISSING=$((MISSING + 1))
+            fi
+          done
+          echo ""
+          echo "Files checked: $(echo "$REQUIRED" | wc -w)"
+          echo "Missing status: $MISSING"
+          if [ "$MISSING" -gt 0 ]; then
+            exit 1
+          fi

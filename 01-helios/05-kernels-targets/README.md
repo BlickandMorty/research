@@ -1,3 +1,8 @@
+---
+state: index — all entries are P (target only)
+last-verified: 2026-05-09
+---
+
 # Kernels — Targets, Not Implementations
 
 > *This subdirectory exists so that no one downstream — including future me — confuses a target for an implementation.*

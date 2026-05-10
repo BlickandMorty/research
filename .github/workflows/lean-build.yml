@@ -1,0 +1,52 @@
+name: Lean Build
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'lean/**'
+      - '.github/workflows/lean-build.yml'
+  pull_request:
+    paths:
+      - 'lean/**'
+      - '.github/workflows/lean-build.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: lean
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install elan
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh \
+            | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Print Lean / Lake versions
+        run: |
+          lean --version
+          lake --version
+
+      - name: lake update
+        run: lake update
+
+      - name: lake build
+        run: lake build
+
+      - name: Sorry-budget summary
+        run: |
+          echo "## Sorry-budget summary" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "Per file (greps for \`sorry\` outside doc-comments):" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          ( find ResearchCanon -name "*.lean" -print0 \
+              | xargs -0 grep -c '^[[:space:]]*sorry' \
+              | sort ) >> "$GITHUB_STEP_SUMMARY" || true
+          echo '```' >> "$GITHUB_STEP_SUMMARY"

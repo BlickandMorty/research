@@ -1,3 +1,8 @@
+---
+state: index — sub-section overview
+last-verified: 2026-05-09
+---
+
 # Parameter Connectome Family — T25 through T34
 
 > *Mathematical safety primitives in the parameter subspace. The thesis: a sparse, faithful decomposition of model parameters lifts to runtime as an active-rank-one execution path; component-level edits bound out-of-edit perplexity drift; the connectome over component clusters carries a cellular sheaf whose global sections coincide with consistent multi-component computations.*

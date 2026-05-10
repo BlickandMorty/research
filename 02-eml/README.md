@@ -1,3 +1,8 @@
+---
+state: index — pillar overview
+last-verified: 2026-05-09
+---
+
 # EML — Reconceptualizing Computation
 
 > *Elementary scientific computation reduces to a single binary operator: `eml(x, y) = exp(x) − ln(y)`. The grammar `S → 1 | eml(S, S)` is dense in the continuous functions over compact domains. The kernel design problem becomes a Stone-Weierstrass density argument plus an ULP-bounded equivalence check.*

@@ -1,3 +1,8 @@
+---
+state: index — pillar overview
+last-verified: 2026-05-09
+---
+
 # HELIOS — Inference Substrate Canon
 
 > *Attention is not a softmax pass. It is an interruptible computation, scored against an audit invariant, with a verifiable static fallback.*

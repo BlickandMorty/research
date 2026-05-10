@@ -1,5 +1,9 @@
 # Research
 
+[![Lean Build](https://github.com/BlickandMorty/research/actions/workflows/lean-build.yml/badge.svg)](https://github.com/BlickandMorty/research/actions/workflows/lean-build.yml)
+[![Markdown Checks](https://github.com/BlickandMorty/research/actions/workflows/markdown-checks.yml/badge.svg)](https://github.com/BlickandMorty/research/actions/workflows/markdown-checks.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 A working notebook of mathematical primitives embedded in the latent and parameter subspaces of post-transformer runtimes — built so that *what counts as harm* and *what counts as a faithful computation* are first-class invariants, not afterthoughts.
 
 By [Jordan Conley](https://linkedin.com/in/jordanconley30) — ML red-team engineer at Mercor.
@@ -41,8 +45,10 @@ This is the public mirror of an active, opinionated research notebook. Some entr
 ### 5 minutes — is the work serious?
 1. [`STATUS_LEGEND.md`](./STATUS_LEGEND.md) — what `C / EV / EB / P / DROP` mean.
 2. [`00-spine/methodology.md`](./00-spine/methodology.md) — falsifier-first, attack-with-defense, the WRV ladder.
-3. [`01-helios/04-attention-as-interrupt/README.md`](./01-helios/04-attention-as-interrupt/README.md) — the HELIOS flagship.
-4. [`02-eml/README.md`](./02-eml/README.md) — the EML thesis.
+3. [`00-spine/avenues.md`](./00-spine/avenues.md) — the same body of work mapped to seven entry points (safety, performance, sparsity, local inference, kernel architecture, interpretability, gaming).
+4. [`00-spine/verified-artifacts.md`](./00-spine/verified-artifacts.md) — the test counts, build commands, and verified runtime invariants behind the EV claims.
+5. [`01-helios/04-attention-as-interrupt/README.md`](./01-helios/04-attention-as-interrupt/README.md) — the HELIOS flagship.
+6. [`02-eml/README.md`](./02-eml/README.md) — the EML thesis.
 
 ### 30 minutes — engage with the work
 1. The reading paths above.
@@ -54,10 +60,13 @@ This is the public mirror of an active, opinionated research notebook. Some entr
 ### Hiring-manager path
 1. This README.
 2. [`STATUS_LEGEND.md`](./STATUS_LEGEND.md) — how I label proved vs provisional.
-3. Whichever pillar matches the role:
+3. [`00-spine/avenues.md`](./00-spine/avenues.md) — the work mapped to the avenue you came in on.
+4. [`00-spine/verified-artifacts.md`](./00-spine/verified-artifacts.md) — what is actually verified, with test counts and commands.
+5. Whichever pillar matches the role:
    - Interpretability / mech-interp / safety: → [`01-helios/03-parameter-connectome-T25-T34/`](./01-helios/03-parameter-connectome-T25-T34/) and [`01-helios/04-attention-as-interrupt/`](./01-helios/04-attention-as-interrupt/).
    - Foundation models / on-device inference: → [`01-helios/04-attention-as-interrupt/`](./01-helios/04-attention-as-interrupt/) and [`03-substrate-ideas/01-storage-disaggregated-E3/`](./03-substrate-ideas/01-storage-disaggregated-E3/).
    - Numerical methods / computation foundations: → [`02-eml/`](./02-eml/) end to end.
+   - Game design / structured-data: → [`03-substrate-ideas/05-data-as-lattice/`](./03-substrate-ideas/05-data-as-lattice/).
 
 ---
 
@@ -85,7 +94,9 @@ research/
 │
 ├── 00-spine/                       ← cross-cutting docs
 │   ├── thesis.md                   ← unified thesis
-│   └── methodology.md              ← falsifier-first / attack-with-defense / WRV
+│   ├── methodology.md              ← falsifier-first / attack-with-defense / WRV
+│   ├── avenues.md                  ← seven entry points (safety / performance / sparsity / local / kernel / interp / gaming)
+│   └── verified-artifacts.md       ← test counts, build commands, EV evidence
 │
 ├── 01-helios/                      ← Pillar 1 — substrate canon
 │   ├── README.md
@@ -111,7 +122,8 @@ research/
 │   ├── 01-storage-disaggregated-E3/    ← SSD as RAM extension (mmap)
 │   ├── 02-acs-episodic-plane/          ← ACS in the Episodic plane
 │   ├── 03-honesty-by-construction/     ← StaticFallbackAcknowledged contract
-│   └── 04-five-plane-formalism/        ← State / Episodic / Assembly / Controller / Verification
+│   ├── 04-five-plane-formalism/        ← State / Episodic / Assembly / Controller / Verification
+│   └── 05-data-as-lattice/             ← gaming application: shared ontology across game systems
 │
 ├── lean/                            ← Lean 4 substrate
 │   ├── lakefile.lean                ← mathlib4 pin
